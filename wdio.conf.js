@@ -27,6 +27,7 @@ exports.config = {
     maxInstances: 10,
     capabilities: [{
         "platformName": "Android",
+        // BrowserStack configuration
         // "project": "EBAC-WooCommerce",
         // "build": "browserstack-build-1",
         // "name": "local_test",
@@ -50,9 +51,11 @@ exports.config = {
     bail: 0,
     baseUrl: 'http://localhost',
     port: 4723,
+    // Use with BrowserStack
     // user: process.env.BROWSERSTACK_USERNAME || 'giovannashinhe_r0QjYc',
     // key: process.env.BROWSERSTACK_ACCESS_KEY || 'gNoJ2z35YoYxKHnsTs1A',
     // services: ['browserstack'],
+    services: ['appium'],
     path: '/wd/hub',
     // Default timeout for all waitFor* commands.
     waitforTimeout: 100000,
