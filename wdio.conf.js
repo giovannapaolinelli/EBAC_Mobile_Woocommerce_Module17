@@ -16,11 +16,6 @@ exports.config = {
     specs:[
         './test/specs/**/*.js'
     ],
-    // Patterns to exclude.
-    exclude: [
-        // 'path/to/excluded/files'
-    ],
-    //
     // ============
     // Capabilities
     // ============
@@ -49,14 +44,18 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     logLevel: 'info',
     bail: 0,
-    baseUrl: 'http://localhost',
+    // baseUrl: 'http://localhost',
     port: 4723,
     // Use with BrowserStack
     // user: process.env.BROWSERSTACK_USERNAME || 'giovannashinhe_r0QjYc',
     // key: process.env.BROWSERSTACK_ACCESS_KEY || 'gNoJ2z35YoYxKHnsTs1A',
     // services: ['browserstack'],
-    // services: ['appium'],
-    path: '/wd/hub',
+    services: [
+        ['appium', {
+            command : 'appium'
+        }]
+    ],
+    // path: '/wd/hub',
     // Default timeout for all waitFor* commands.
     waitforTimeout: 100000,
     connectionRetryTimeout: 120000,
