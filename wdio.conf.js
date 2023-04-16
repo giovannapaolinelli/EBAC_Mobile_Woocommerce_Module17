@@ -55,7 +55,7 @@ exports.config = {
     // user: process.env.BROWSERSTACK_USERNAME || 'giovannashinhe_r0QjYc',
     // key: process.env.BROWSERSTACK_ACCESS_KEY || 'gNoJ2z35YoYxKHnsTs1A',
     // services: ['browserstack'],
-    services: ['appium'],
+    // services: ['appium'],
     path: '/wd/hub',
     // Default timeout for all waitFor* commands.
     waitforTimeout: 100000,
